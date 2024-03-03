@@ -5,12 +5,12 @@ import pydeck as pdk
 st.markdown(
    """
     <style>
-    /* Estilos para desktop */
-    .stDeployButton, [data-testid="stShareMenuButton"], [data-testid="stStarButton"], [data-testid="stGitRepoButton"] {
-        visibility: hidden;
-    }
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
+/* Oculta o botão 'Share' */
+    [data-testid="stShareButton"] {visibility: hidden;}
+    /* Oculta o botão de favorito */
+    [data-testid="stFavButton"] {visibility: hidden;}
+    /* Oculta o botão do GitHub */
+    [data-testid="stGitButton"] {visibility: hidden;}
     </style>
     """, unsafe_allow_html=True
 )
