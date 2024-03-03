@@ -3,17 +3,21 @@ import pandas as pd
 import pydeck as pdk
 # Oculta o botão "Fork this app" e outros elementos indesejados
 st.markdown(
-    """
+   """
     <style>
-    /* Oculta o botão 'Fork this app' */
-    .stDeployButton {visibility: hidden;}
-    /* Oculta o menu principal e o rodapé */
+    /* Estilos para desktop */
+    .stDeployButton, [data-testid="stShareMenuButton"], [data-testid="stStarButton"], [data-testid="stGitRepoButton"] {
+        visibility: hidden;
+    }
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
-    /* Oculta o botão 'Share' */
-    [data-testid="stShareMenuButton"] {visibility: hidden;}
-    /* Oculta os ícones de favorito e GitHub */
-    [data-testid="stStarButton"], [data-testid="stGitRepoButton"] {visibility: hidden;}
+
+    /* Estilos específicos para dispositivos móveis */
+    @media only screen and (max-width: 600px) {
+        .stDeployButton, [data-testid="stShareMenuButton"], [data-testid="stStarButton"], [data-testid="stGitRepoButton"], #MainMenu, footer {
+            visibility: hidden;
+        }
+    }
     </style>
     """, unsafe_allow_html=True
 )
