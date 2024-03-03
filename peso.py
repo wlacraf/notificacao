@@ -9,6 +9,8 @@ def carregar_dados(nome_arquivo):
 # Titulo do aplicativo
 st.title("Mapa de Localização das Notificações")
 col1, col2, col3, col4 = st.columns(4)
+with col1:
+  st.write("Ref.: Fevereiro de 2024")  
 with col2:
  st.write("by Eng Wagner Cunha")
 with col3:
