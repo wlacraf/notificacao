@@ -7,7 +7,8 @@ def carregar_dados(nome_arquivo):
     return pd.read_csv(nome_arquivo, encoding='latin1',engine='python')
 
 # Titulo do aplicativo
-st.title("Mapa de Localizações das Notificações")
+st.title("Mapa de Localização das Notificações")
+st.write ("by Eng Wagner Cunha")
 
 # Carrega os dados
 nome_arquivo = 'notificacao.csv'
