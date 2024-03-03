@@ -1,7 +1,16 @@
 import streamlit as st
 import pandas as pd
 import pydeck as pdk
-
+# Oculta o botão "Fork this app" e outros elementos indesejados
+st.markdown(
+    """
+    <style>
+    .stDeployButton {visibility: hidden;}
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    </style>
+    """, unsafe_allow_html=True
+)
 # Carrega o DataFrame a partir de um arquivo CSV
 def carregar_dados(nome_arquivo):
     return pd.read_csv(nome_arquivo, encoding='latin1',engine='python')
