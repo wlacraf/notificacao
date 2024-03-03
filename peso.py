@@ -9,10 +9,10 @@ def carregar_dados(nome_arquivo):
 # Titulo do aplicativo
 st.title("Mapa de Localização das Notificações")
 col1, col2, col3, col4 = st.columns(4)
-    with col2:
-        st.write("by Eng Wagner Cunha")
-    with col3:
-        st.write("PMAC")
+with col2:
+ st.write("by Eng Wagner Cunha")
+with col3:
+ st.write("PMAC")
 
 # Carrega os dados
 nome_arquivo = 'notificacao.csv'
