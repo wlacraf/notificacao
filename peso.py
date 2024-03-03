@@ -5,9 +5,15 @@ import pydeck as pdk
 st.markdown(
     """
     <style>
+    /* Oculta o botão 'Fork this app' */
     .stDeployButton {visibility: hidden;}
+    /* Oculta o menu principal e o rodapé */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
+    /* Oculta o botão 'Share' */
+    [data-testid="stShareMenuButton"] {visibility: hidden;}
+    /* Oculta os ícones de favorito e GitHub */
+    [data-testid="stStarButton"], [data-testid="stGitRepoButton"] {visibility: hidden;}
     </style>
     """, unsafe_allow_html=True
 )
